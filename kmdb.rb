@@ -271,6 +271,8 @@ new_role15["actor_id"] = annie["id"]
 new_role15["character_name"] = "Selina Kyle"
 new_role15.save
 
+all_roles = Role.all
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -293,4 +295,11 @@ puts "========"
 puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
-# TODO!
+for role in all_roles
+    movie_title = Movie.find_by({"id" => role["movie_id"]})
+    movie_title_output = movie_title["title"]
+    actor_name = Actor.find_by({"id" => role["actor_id"]})
+    actor_name_output = actor_name["name"]
+    role_name = role["character_name"]
+    puts "#{movie_title_output} #{actor_name_output} #{role_name}"
+end
