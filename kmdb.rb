@@ -94,7 +94,7 @@ warner = Studio.find_by({ "name" => "Warner Bros." })
 # Movies
 
 new_movie = Movie.new
-new_movie["title"] = "Batmin Begins"
+new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = 2005
 new_movie["rated"] = "PG-13"
 new_movie["studio_id"] = warner["id"]
@@ -163,6 +163,32 @@ new_actor10.save
 new_actor11 = Actor.new
 new_actor11["name"] = "Anne Hathaway"
 new_actor11.save
+
+chris = Actor.find_by({ "name" => "Christian Bale" })
+mike = Actor.find_by({ "name" => "Michael Caine" })
+lee = Actor.find_by({ "name" => "Liam Neeson" })
+kat = Actor.find_by({ "name" => "Katie Holmes" })
+garebear = Actor.find_by({ "name" => "Gary Oldman" })
+heathbar = Actor.find_by({ "name" => "Heath Ledger" })
+ron = Actor.find_by({ "name" => "Aaron Eckhart" })
+mags = Actor.find_by({ "name" => "Maggie Gyllenhaal" })
+tommy = Actor.find_by({ "name" => "Tom Hardy" })
+joe = Actor.find_by({ "name" => "Joseph Gordon-Levitt" })
+annie = Actor.find_by({ "name" => "Anne Hathaway" })
+
+# Roles
+
+new_role = Role.new
+new_role["movie_id"] = batman1["id"]
+new_role["actor_id"] = chris["id"]
+new_role["character_name"] = "Bruce Wayne"
+new_role.save
+
+new_role2 = Role.new
+new_role2["movie_id"] = batman1["id"]
+new_role2["actor_id"] = chris["id"]
+new_role2["character_name"] = "Bruce Wayne"
+new_role2.save
 
 # Prints a header for the movies output
 puts "Movies"
