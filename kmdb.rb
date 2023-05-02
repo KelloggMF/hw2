@@ -238,6 +238,36 @@ new_role10["actor_id"] = mags["id"]
 new_role10["character_name"] = "Rachel Dawes"
 new_role10.save
 
+new_role11 = Role.new
+new_role11["movie_id"] = batman3["id"]
+new_role11["actor_id"] = chris["id"]
+new_role11["character_name"] = "Bruce Wayne"
+new_role11.save
+
+new_role12 = Role.new
+new_role12["movie_id"] = batman3["id"]
+new_role12["actor_id"] = garebear["id"]
+new_role12["character_name"] = "Commissioner Gordon"
+new_role12.save
+
+new_role13 = Role.new
+new_role13["movie_id"] = batman3["id"]
+new_role13["actor_id"] = tommy["id"]
+new_role13["character_name"] = "Bane"
+new_role13.save
+
+new_role14 = Role.new
+new_role14["movie_id"] = batman3["id"]
+new_role14["actor_id"] = joe["id"]
+new_role14["character_name"] = "John Blake"
+new_role14.save
+
+new_role15 = Role.new
+new_role15["movie_id"] = batman3["id"]
+new_role15["actor_id"] = annie["id"]
+new_role15["character_name"] = "Selina Kyle"
+new_role15.save
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
