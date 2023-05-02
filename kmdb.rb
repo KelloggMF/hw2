@@ -186,9 +186,57 @@ new_role.save
 
 new_role2 = Role.new
 new_role2["movie_id"] = batman1["id"]
-new_role2["actor_id"] = chris["id"]
-new_role2["character_name"] = "Bruce Wayne"
+new_role2["actor_id"] = mike["id"]
+new_role2["character_name"] = "Alfred"
 new_role2.save
+
+new_role3 = Role.new
+new_role3["movie_id"] = batman1["id"]
+new_role3["actor_id"] = lee["id"]
+new_role3["character_name"] = "Ra's Al Ghul"
+new_role3.save
+
+new_role4 = Role.new
+new_role4["movie_id"] = batman1["id"]
+new_role4["actor_id"] = kat["id"]
+new_role4["character_name"] = "Rachel Dawes"
+new_role4.save
+
+new_role5 = Role.new
+new_role5["movie_id"] = batman1["id"]
+new_role5["actor_id"] = garebear["id"]
+new_role5["character_name"] = "Commissioner Gordon"
+new_role5.save
+
+new_role6 = Role.new
+new_role6["movie_id"] = batman2["id"]
+new_role6["actor_id"] = chris["id"]
+new_role6["character_name"] = "Bruce Wayne"
+new_role6.save
+
+new_role7 = Role.new
+new_role7["movie_id"] = batman2["id"]
+new_role7["actor_id"] = heathbar["id"]
+new_role7["character_name"] = "Joker"
+new_role7.save
+
+new_role8 = Role.new
+new_role8["movie_id"] = batman2["id"]
+new_role8["actor_id"] = ron["id"]
+new_role8["character_name"] = "Harvey Dent"
+new_role8.save
+
+new_role9 = Role.new
+new_role9["movie_id"] = batman2["id"]
+new_role9["actor_id"] = mike["id"]
+new_role9["character_name"] = "Alfred"
+new_role9.save
+
+new_role10 = Role.new
+new_role10["movie_id"] = batman2["id"]
+new_role10["actor_id"] = mags["id"]
+new_role10["character_name"] = "Rachel Dawes"
+new_role10.save
 
 # Prints a header for the movies output
 puts "Movies"
