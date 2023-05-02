@@ -67,6 +67,7 @@
 # The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
 # The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
+
 # Delete existing data, so you'll start fresh each time this script is run.
 Studio.destroy_all
 Movie.destroy_all
@@ -117,6 +118,8 @@ new_movie3.save
 batman1 = Movie.find_by({ "title" => "Batman Begins" })
 batman2 = Movie.find_by({ "title" => "The Dark Knight" })
 batman3 = Movie.find_by({ "title" => "The Dark Knight Rises" })
+
+all_movies = Movie.all
 
 # Actors
 
@@ -274,7 +277,14 @@ puts "======"
 puts ""
 
 # Query the movies data and loop through the results to display the movies output.
-# TODO!
+for movie in all_movies
+    title = movie["title"]
+    year = movie["year_released"]
+    rated = movie["rated"]
+    studio = Studio.find_by({"id" => movie["studio_id"]})
+    studio_name = studio["name"]
+    puts "#{title} #{year} #{rated} #{studio_name}"
+end
 
 # Prints a header for the cast output
 puts ""
